@@ -1,0 +1,21 @@
+setwd("scripts")
+source("nearestDyadVit.R", chdir = TRUE)
+source("sp_chemical.R", chdir = TRUE)
+
+setwd("../")
+setwd("sp_genome")
+setwd("predNuCpos_sc")
+
+# non-redundant chemical dyad と Viterbi dyads を比べる
+sd01.nuCposSpSc <- nearestDyadVit(dyad.table = sd01, chr.num = 3, 
+			prefix = "nuCposSpSc", nuc.size = 147)
+
+# redundant chemical dyad と Viterbi dyads を比べる
+sd02.nuCposSpSc <- nearestDyadVit(dyad.table = sd02, chr.num = 3, 
+			prefix = "nuCposSpSc", nuc.size = 147)
+
+# 保存する。
+setwd("../../")
+setwd("RData")
+save(sd01.nuCposSpSc, file = "sd01_nuCposSpSc.RData")
+save(sd02.nuCposSpSc, file = "sd02_nuCposSpSc.RData")
