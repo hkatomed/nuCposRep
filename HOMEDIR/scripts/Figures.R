@@ -169,7 +169,43 @@ for(i in 1:length(prefixes)){
 	load(file = filename)
 }
 
-# Figure 1A, Matched-species models (Target: Sc, Model: Sc)
+# Figure 1A NEW, Matched-species models (Target: Sc, Model: Sc)
+plot(x = NuPoPScSc.perf.UniqueW0@x.values[[1]], y = NuPoPScSc.perf.UniqueW0@y.values[[1]], 
+	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
+	main = "Sc: Matched-species models", 
+	xlab = "False Positive Rate", ylab = "True Positive Rate")
+abline(a=0, b= 1, lwd = 4, col = "orange")
+lines(x = NuPoPScSc.perf.UniqueW0@x.values[[1]], y = NuPoPScSc.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "blue")
+# lines(x = NuPoPScSc.perf.RedundantW0@x.values[[1]], y = NuPoPScSc.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "blue")
+lines(x = nuCposScSc.perf.UniqueW0@x.values[[1]], y = nuCposScSc.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "red")
+# lines(x = nuCposScSc.perf.RedundantW0@x.values[[1]], y = nuCposScSc.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "red")
+box(lwd = 4)
+axis(side = 1, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+axis(side = 2, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+
+# Figure 1A NEW, Matched-species models (Target: Sp, Model: Sp)
+plot(x = NuPoPSpSp.perf.UniqueW0@x.values[[1]], y = NuPoPSpSp.perf.UniqueW0@y.values[[1]], 
+	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
+	main = "Sp: Matched-species models", 
+	xlab = "False Positive Rate", ylab = "True Positive Rate")
+abline(a=0, b= 1, lwd = 4, col = "orange")
+lines(x = NuPoPSpSp.perf.UniqueW0@x.values[[1]], y = NuPoPSpSp.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "blue")
+# lines(x = NuPoPSpSp.perf.RedundantW0@x.values[[1]], y = NuPoPSpSp.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "blue")
+lines(x = nuCposSpSp.perf.UniqueW0@x.values[[1]], y = nuCposSpSp.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "red")
+# lines(x = nuCposSpSp.perf.RedundantW0@x.values[[1]], y = nuCposSpSp.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "red")
+box(lwd = 4)
+axis(side = 1, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+axis(side = 2, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+
+# Figure 1A OLD, Matched-species models (Target: Sc, Model: Sc)
 plot(x = NuPoPScSc.perf.UniqueW0@x.values[[1]], y = NuPoPScSc.perf.UniqueW0@y.values[[1]], 
 	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
 	main = "Sc: Matched-species models", 
@@ -187,7 +223,7 @@ box(lwd = 2)
 axis(side = 1, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 axis(side = 2, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 
-# Figure 1A, Cross-species models (Target: Sc, Model: Sp)
+# Figure 1A OLD, Cross-species models (Target: Sc, Model: Sp)
 plot(x = NuPoPScSp.perf.UniqueW0@x.values[[1]], y = NuPoPScSp.perf.UniqueW0@y.values[[1]], 
 	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
 	main = "Sc: Cross-species models", 
@@ -205,7 +241,7 @@ box(lwd = 2)
 axis(side = 1, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 axis(side = 2, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 
-# Figure 1A, Cross-species models (Target: Sp, Model: Sc)
+# Figure 1A OLD, Cross-species models (Target: Sp, Model: Sc)
 plot(x = NuPoPSpSc.perf.UniqueW0@x.values[[1]], y = NuPoPSpSc.perf.UniqueW0@y.values[[1]], 
 	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
 	main = "Sp: Cross-species models", 
@@ -223,7 +259,7 @@ box(lwd = 2)
 axis(side = 1, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 axis(side = 2, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 
-# Figure 1A, Matched-species models (Target: Sp, Model: Sp)
+# Figure 1A OLD, Matched-species models (Target: Sp, Model: Sp)
 plot(x = NuPoPSpSp.perf.UniqueW0@x.values[[1]], y = NuPoPSpSp.perf.UniqueW0@y.values[[1]], 
 	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
 	main = "Sp: Matched-species models", 
@@ -240,6 +276,7 @@ lines(x = nuCposSpSp.perf.RedundantW0@x.values[[1]], y = nuCposSpSp.perf.Redunda
 box(lwd = 2)
 axis(side = 1, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 axis(side = 2, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+
 
 
 #####################################################
@@ -359,7 +396,26 @@ for(i in 1:length(prefixes)){
 	load(file = filename)
 }
 
-## Figure 7C, mouse model
+## Figure 7C NEW, mouse model
+plot(x = NuPoPMmMm.chr19.perf.UniqueW0@x.values[[1]], y = NuPoPMmMm.chr19.perf.UniqueW0@y.values[[1]], 
+	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
+	main = "Mouse models", 
+	xlab = "False Positive Rate", ylab = "True Positive Rate")
+abline(a=0, b= 1, lwd = 4, col = "orange")
+lines(x = NuPoPMmMm.chr19.perf.UniqueW0@x.values[[1]], y = NuPoPMmMm.chr19.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "blue")
+# lines(x = NuPoPMmMm.chr19.perf.RedundantW0@x.values[[1]], y =NuPoPMmMm.chr19.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "blue")
+lines(x = nuCposMmMm.chr19.perf.UniqueW0@x.values[[1]], y = nuCposMmMm.chr19.perf.UniqueW0@y.values[[1]], 
+	lty = 1, lwd = 4, col = "red")
+# lines(x = nuCposMmMm.chr19.perf.RedundantW0@x.values[[1]], y = nuCposMmMm.chr19.perf.RedundantW0@y.values[[1]], 
+# 	lty = 2, lwd = 4, col = "red")
+box(lwd = 4)
+axis(side = 1, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+axis(side = 2, lwd.ticks = 4, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+
+
+## Figure 7C OLD, mouse model
 plot(x = NuPoPMmMm.chr19.perf.UniqueW0@x.values[[1]], y = NuPoPMmMm.chr19.perf.UniqueW0@y.values[[1]], 
 	type = "n", lwd = 2, xaxt = "n", yaxt = "n", 
 	main = "Mouse models", 
@@ -376,6 +432,7 @@ lines(x = nuCposMmMm.chr19.perf.RedundantW0@x.values[[1]], y = nuCposMmMm.chr19.
 box(lwd = 2)
 axis(side = 1, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
 axis(side = 2, lwd.ticks = 2, at = seq(0, 1, 0.2), labels = as.character(seq(0, 1, 0.2)))
+
 
 
 ####################################################
