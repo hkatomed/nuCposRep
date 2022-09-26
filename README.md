@@ -9,11 +9,11 @@ Codes for reproducing the results
 # Also, some packages must be installed.
 # Large data (~27 GB) will be stored in HOMEDIR.
 #  
-## These three files can be obtained from indicated URLs.
+## These three files can be obtained from indicated URLs.  (bug fixed for the yeast genome)
 #   Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.gz
 #     URL: ftp://ftp.ensemblgenomes.org/pub/fungi/release-42/fasta/schizosaccharomyces_pombe/dna/
-#   Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
-#     URL: ftp://ftp.ensembl.org/pub/release-84/fasta/saccharomyces_cerevisiae/dna/
+#   S288C_reference_sequence_R64-1-1_20110203.fsa
+#     URL: http://sgd-archive.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-1-1_20110203.tgz
 #   Mus_musculus.NCBIM37.67.dna.toplevel.fa.gz
 #     URL: ftp://ftp.ensembl.org/pub/release-67/fasta/mus_musculus/dna/
 #   -> Store them in HOMEDIR/genome
@@ -93,7 +93,7 @@ Codes for reproducing the results
 # 
 ## sc_genome.R
 # loads
-#   genome/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz(!)
+#   genome/S288C_reference_sequence_R64-1-1_20110203.fsa(!) (bug fixed)
 # outputs
 #   sc_genome_2011/predNuPoP_sc/sc_genome_2011_chr*.fasta
 #   sc_genome_2011/predNuPoP_sp/sc_genome_2011_chr*.fasta
@@ -266,7 +266,7 @@ Codes for reproducing the results
 # 
 ## yeast_genomes.R
 # loads
-#   genome/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
+#   genome/S288C_reference_sequence_R64-1-1_20110203.fsa (bug fixed)
 #   genome/Schizosaccharomyces_pombe.ASM294v2.dna.toplevel.fa.gz
 # outputs
 #   RData/sc_genome_2011.RData
